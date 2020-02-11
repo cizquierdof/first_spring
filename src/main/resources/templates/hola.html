@@ -1,11 +1,27 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+
 <body>
     <h1>Página de prueba</h1>
-    <p th:text="'Hello, ' + ${name} + '!'" />
+    <form action="/calculadora" method="POST">
+
+        <p th:text="${mensaje}"></p>
+        operando1:<input type="text" id="" name="op1">
+        operandor:<select name="op">
+            <option value="suma">+</option>
+            <option value="resta">-</option>
+            <option value="multiplica">*</option>
+            <option value="divide">/</option>
+            <option value="raiz">raiz</option>
+        </select>
+        operando2:<input type="text" id="" name="op2">
+        <input type="submit">
+    </form>
 </body>
+
 </html>
